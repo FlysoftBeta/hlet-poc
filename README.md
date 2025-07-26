@@ -6,7 +6,7 @@
 
 ## 下载
 
-Checkpoints/训练数据集/验证数据集可在 Releases 中下载。
+Checkpoints/训练数据集/验证数据集可在 [Releases](https://github.com/FlysoftBeta/hlet-poc/releases) 中下载，下载后放入项目目录即可。
 
 ## Linux 上运行
 
@@ -17,7 +17,7 @@ $ . .venv/bin/activate
 $ pip install torch --index-url https://download.pytorch.org/whl/cu118
 $ pip install -r ./requirements.txt
 
-$ # 只测试(使用现有checkpoint)，不训练
+$ # 只测试(使用现有checkpoint)，不训练，需要下载 checkpoint
 $ ./test.sh
 ...
 Acc: 0.99 Yay!
