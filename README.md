@@ -25,17 +25,21 @@ $ python3 -m pip install -r ./requirements.txt
 
 # 交互式环境 (请先训练或下载预训练的模型)
 $ python3 ./repl.py
-输入字符串:56个人
-猜测结果: 56
-输入字符串:六个人
-猜测结果: 6
-输入字符串:三十七个人
-猜测结果: 37
-输入字符串:他们经历了九九八十一难
-猜测结果: 81
+Input: hello the second era
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.91it/s]
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+Time elapsed: 2.08s
+Prediction: 2
+Input: 他们经历了九九八十一难
+Time elapsed: 0.05s
+Prediction: 81
+Input: La vingt-septième pomme est une Fuji ou une pomme de Yantai?
+Time elapsed: 0.06s
+Prediction: 27
 
-# 测试准确率
+# 使用测试数据集测试准确率
 $ python3 ./test.py
+
 
 # 重新生成所需数据集
 $ python3 ./gen.py ./dataset.jsonl n 4000
