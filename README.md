@@ -14,7 +14,7 @@
 - 操作系统: Manjaro Linux
 - 内存: 16G
 - CPU: AMD Ryzen 7 7435H (16) @ 4.553GHz 
-- GPU: NVIDIA GeForce RTX 4060 Mobile
+- GPU: NVIDIA GeForce RTX 4060 Mobile 8GB
 
 ```
 # 配置环境
