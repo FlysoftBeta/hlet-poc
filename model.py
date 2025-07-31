@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from util import max_value
 
 
 class FFN(nn.Module):
@@ -48,6 +47,7 @@ class Model(nn.Module):
         self.num_decoder_layers = 4
         self.hidden_size = 256
         self.imm_size = 512
+        self.max_value = 100
 
         self.base_layers = nn.ModuleList(
             [
@@ -63,7 +63,7 @@ class Model(nn.Module):
             ]
         )
         self.norm = nn.RMSNorm(self.hidden_size)
-        self.num_pred_head = nn.Linear(self.hidden_size, max_value)
+        self.num_pred_head = nn.Linear(self.hidden_size, self.max_value)
 
     def forward(
         self,
