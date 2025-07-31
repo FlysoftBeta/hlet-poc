@@ -60,7 +60,7 @@ class HLET:
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
 
-    def infer(self, pp_data: PreprocessedData) -> torch.LongTensor:
+    def infer(self, pp_data: PreprocessedData) -> tuple[torch.LongTensor, torch.LongTensor]:
         targets = []
         outs = []
         with torch.no_grad():
