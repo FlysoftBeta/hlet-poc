@@ -42,8 +42,15 @@ $ python3 ./test.py
 
 
 # 重新生成所需数据集
-$ python3 ./gen.py ./dataset.jsonl n 4000
-$ python3 ./gen.py ./val_dataset.jsonl y 1000
+$ python3 ./gen.py ./dataset.jsonl chinese_arabic 4000 # 训练用
+$ python3 ./gen.py ./chinese_val_dataset.jsonl chinese 1000
+$ python3 ./gen.py ./chinese_roman_val_dataset.jsonl chinese_roman 1000
+$ python3 ./gen.py ./chinese_trad_val_dataset.jsonl chinese_trad 1000
+$ python3 ./gen.py ./spanish_val_dataset.jsonl spanish 1000
+$ python3 ./gen.py ./spanish_arabic_val_dataset.jsonl spanish_arabic 1000
+$ python3 ./gen.py ./english_val_dataset.jsonl english 1000
+$ python3 ./gen.py ./english_roman_val_dataset.jsonl english_roman 1000
+$ python3 ./gen.py ./english_arabic_val_dataset.jsonl english_arabic 1000
 
 # 重新训练 (epochs=80)
 $ rm -rf ./checkpoint.pt && python3 ./train.py
